@@ -315,6 +315,11 @@ a, a:hover, a:visited {
     .container {
       max-width: 900px; } }
 
+.menu {
+  height: 100vh;
+  width: 20vw;
+  border: 1px solid #333; }
+
 html {
   font-size: 12px; }
   @media screen and (min-width: 350px) {
