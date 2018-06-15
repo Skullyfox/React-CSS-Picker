@@ -2,6 +2,7 @@ import React                              from 'react';
 import { BrowserRouter, Switch, Route}    from 'react-router-dom';
 
 import Home                               from './pages/Home/Home.jsx';
+import Menu                               from './components/Menu/Menu.jsx'
 
 class App extends React.Component {
     constructor(props) {
@@ -12,9 +13,9 @@ class App extends React.Component {
         return (
             <BrowserRouter>
                 <React.Fragment>
-                    <div>MENU</div>
+                    <Menu />
                     <Switch>
-                        <Route component={Home}/>
+                        <Route path="/" component={Home}/>
                     </Switch>
                 </React.Fragment>    
             </BrowserRouter>
