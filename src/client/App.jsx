@@ -1,5 +1,7 @@
-import React from 'react';
-import { BrowserRouter, Switch, Route} from 'react-router-dom';
+import React                              from 'react';
+import { BrowserRouter, Switch, Route}    from 'react-router-dom';
+
+import Home                               from './pages/Home/Home.jsx';
 
 class App extends React.Component {
     constructor(props) {
@@ -9,7 +11,12 @@ class App extends React.Component {
     render() {
         return (
             <BrowserRouter>
-                <h1>Hello World</h1>
+                <React.Fragment>
+                    <div>MENU</div>
+                    <Switch>
+                        <Route component={Home}/>
+                    </Switch>
+                </React.Fragment>    
             </BrowserRouter>
         )
     }
