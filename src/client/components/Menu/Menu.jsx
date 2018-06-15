@@ -1,3 +1,4 @@
+import React from 'react';
 import template      from './template.html.js';
 
 class Menu extends React.Component{
