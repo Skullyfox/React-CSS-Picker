@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Switch, Route} from 'react-router-dom';
 
 class App extends React.Component {
     constructor(props) {
@@ -7,7 +8,9 @@ class App extends React.Component {
 
     render() {
         return (
-            <h1>Hello World</h1>
+            <BrowserRouter>
+                <h1>Hello World</h1>
+            </BrowserRouter>
         )
     }
 }
