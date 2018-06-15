@@ -1,4 +1,50 @@
 .menu
     height: 100vh
     width: 20vw
-    border: 1px solid #333
+    box-shadow: 1px 0px 10px rgba(33,33,33,0.2)
+    padding: 10px 0
+
+    .menuTitle
+        text-align: center
+        color: $black
+        font-size: $font-size-8
+        padding: 10px 0
+    
+    .separator
+        background-color: $black
+        height: 2px
+        width: 100%
+        margin: 2px 0 0 0
+
+    .dropDownToggler
+        width: 100%
+        border: none
+        padding: 10px 0
+        font-size: $font-size-3
+        color: $black
+        &:focus &:active
+            outline: none
+
+    .dropDownCategory
+        height: auto
+        transition: height .8s
+        li
+            list-style: none
+            text-align: center
+            padding: 10px 0
+            transition: all .8s
+            font-size: $font-size-2
+            color: $black
+            &:hover
+                background-color: $success
+            *
+                opacity: 1
+                transition: all .5s
+
+        &.hidden
+            height: -100%
+            li
+                padding: 0
+                *
+                    opacity: 0
+                    font-size: 0

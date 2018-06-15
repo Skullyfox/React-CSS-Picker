@@ -1,3 +1,17 @@
 <div className="menu">
-    <p>sdsqd</p>
+    <h1 class="menuTitle">Menu</h1>
+    <div class="separator"></div>
+    <button class='dropDownToggler' onClick="{() => this.droppedToggle()}" >Category #1</button>
+        <div class="dropDownCategory { this.state.toggled ? 'hidden' : ''}">
+            <li>
+                <p>Keyframes Picker</p>
+            </li>
+            <li>
+                <p>[Coming Soon]</p>
+            </li>
+            <li>
+                <p>[Coming Soon]</p>
+            </li>
+        </div>
+    <button class='dropDownToggler'>Category #2</button>
 </div>

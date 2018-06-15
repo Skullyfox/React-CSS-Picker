@@ -318,7 +318,48 @@ a, a:hover, a:visited {
 .menu {
   height: 100vh;
   width: 20vw;
-  border: 1px solid #333; }
+  box-shadow: 1px 0px 10px rgba(33, 33, 33, 0.2);
+  padding: 10px 0; }
+  .menu .menuTitle {
+    text-align: center;
+    color: #333333;
+    font-size: 3.5em;
+    padding: 10px 0; }
+  .menu .separator {
+    background-color: #333333;
+    height: 2px;
+    width: 100%;
+    margin: 2px 0 0 0; }
+  .menu .dropDownToggler {
+    width: 100%;
+    border: none;
+    padding: 10px 0;
+    font-size: 1.25em;
+    color: #333333; }
+    .menu .dropDownToggler:focus .menu .dropDownToggler:active {
+      outline: none; }
+  .menu .dropDownCategory {
+    height: auto;
+    transition: height .8s; }
+    .menu .dropDownCategory li {
+      list-style: none;
+      text-align: center;
+      padding: 10px 0;
+      transition: all .8s;
+      font-size: 1em;
+      color: #333333; }
+      .menu .dropDownCategory li:hover {
+        background-color: #4fc953; }
+      .menu .dropDownCategory li * {
+        opacity: 1;
+        transition: all .5s; }
+    .menu .dropDownCategory.hidden {
+      height: -100%; }
+      .menu .dropDownCategory.hidden li {
+        padding: 0; }
+        .menu .dropDownCategory.hidden li * {
+          opacity: 0;
+          font-size: 0; }
 
 html {
   font-size: 12px; }
