@@ -347,6 +347,27 @@ a, a:hover, a:visited {
   width: 100%;
   box-shadow: 1px 0px 10px rgba(33, 33, 33, 0.2);
   padding: 10px 0; }
+  .menu #homeButton {
+    background-color: #F44336;
+    color: white;
+    transition: all .3s; }
+    .menu #homeButton:hover {
+      background-color: #E57373;
+      color: #333333; }
+  .menu #firstCategoryButton {
+    background-color: #4CAF50;
+    color: white;
+    transition: all .3s; }
+    .menu #firstCategoryButton:hover {
+      background-color: #81C784;
+      color: #333333; }
+  .menu #secondCategoryButton {
+    background-color: #2196F3;
+    color: white;
+    transition: all .3s; }
+    .menu #secondCategoryButton:hover {
+      background-color: #64B5F6;
+      color: #333333; }
   .menu .menuTitle {
     text-align: center;
     color: #333333;

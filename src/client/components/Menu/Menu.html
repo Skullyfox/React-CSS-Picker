@@ -1,8 +1,8 @@
 <div className="menu">
     <h1 class="menuTitle">Menu</h1>
     <div class="separator"></div>
-    <button class='dropDownToggler'>Home</button>
-    <button class='dropDownToggler' onClick="{() => this.droppedToggle()}" >Category #1</button>
+    <button id="homeButton" class='dropDownToggler'>Home</button>
+    <button id="firstCategoryButton" class='dropDownToggler' onClick="{() => this.droppedToggle()}" >Category #1</button>
         <div class="dropDownCategory { this.state.toggled ? 'hidden' : ''}">
             <li>
                 <p>Keyframes Picker</p>
@@ -14,5 +14,5 @@
                 <p>[Coming Soon]</p>
             </li>
         </div>
-    <button class='dropDownToggler'>[Coming Soon]</button>
+    <button id="secondCategoryButton" class='dropDownToggler'>[Coming Soon]</button>
 </div>
