@@ -1,14 +1,13 @@
 import React from 'react';
+import template      from './template.html.js';
 
 class Home extends React.Component {
-    constructor(props) {
+    constructor (props) {
         super(props);
     }
 
     render() {
-        return (
-            <div>This is the home.</div>
-        )
+        return template.apply(this);
     }
 }
 
