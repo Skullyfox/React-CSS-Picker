@@ -8,7 +8,7 @@ export default function () {
         'id': 'firstCategoryButton',
         'className': 'dropDownToggler',
         'onClick': () => this.droppedToggle()
-    }, 'Category #1'), React.createElement('div', { 'className': 'dropDownCategory ' + (this.state.toggled ? 'hidden' : '') }, React.createElement('li', {}, React.createElement('p', {}, 'Keyframes Picker')), React.createElement('li', {}, React.createElement('p', {}, '[Coming Soon]')), React.createElement('li', {}, React.createElement('p', {}, '[Coming Soon]'))), React.createElement('button', {
+    }, 'Keyframes'), React.createElement('div', { 'className': 'dropDownCategory ' + (this.state.toggled ? 'hidden' : '') }, React.createElement('li', {}, React.createElement('p', {}, 'Loader Picker')), React.createElement('li', {}, React.createElement('p', {}, '[Coming Soon]')), React.createElement('li', {}, React.createElement('p', {}, '[Coming Soon]'))), React.createElement('button', {
         'id': 'secondCategoryButton',
         'className': 'dropDownToggler'
     }, '[Coming Soon]'));
