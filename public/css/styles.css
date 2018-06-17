@@ -342,22 +342,81 @@ a, a:hover, a:visited {
     text-align: center;
     margin: 10px 0; }
 
-.Keyframes .category {
+.Loader .category {
   width: 100%;
-  color: #333333;
-  font-size: 2em;
-  border-bottom: 5px solid rgba(51, 51, 51, 0.3); }
+  background-color: #4CAF50;
+  color: #f2f2f2;
+  font-size: 2em; }
 
-.Keyframes .row {
-  padding: 0px 10px; }
-  .Keyframes .row .item {
-    height: 100%;
-    width: 100%; }
+.Loader .row .item {
+  height: 100%;
+  width: 100%;
+  transition: all .3s; }
+  .Loader .row .item:hover {
+    background-color: #d9d9d9; }
+
+.Loader .row .circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  -webkit-animation: circleLoad 1s infinite linear;
+          animation: circleLoad 1s infinite linear; }
+  .Loader .row .circle.one {
+    border: 3px solid #439cef;
+    border-bottom-color: #333333; }
+  .Loader .row .circle.two {
+    border: 5px dotted #439cef;
+    border-bottom-color: #333333; }
+  .Loader .row .circle.three {
+    border: 3px dashed #439cef;
+    border-bottom-color: #333333; }
+  .Loader .row .circle.four {
+    border: 3px double #439cef;
+    border-bottom-color: #333333; }
+
+@-webkit-keyframes circleLoad {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes circleLoad {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@-webkit-keyframes ballLoad {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); }
+  50% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%); }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); } }
+
+@keyframes ballLoad {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); }
+  50% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%); }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); } }
 
 .menu {
+  z-index: 1;
   height: 100vh;
   width: 100%;
-  box-shadow: 1px 0px 10px rgba(33, 33, 33, 0.2);
+  box-shadow: 1px 0px 10px rgba(33, 33, 33, 0.3);
   padding: 10px 0; }
   .menu #homeButton {
     background-color: #F44336;

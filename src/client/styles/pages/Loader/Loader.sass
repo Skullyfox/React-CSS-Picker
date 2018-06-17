@@ -1,11 +1,30 @@
 .Loader
     .category
         width: 100%
-        color: $black
+        background-color: #4CAF50
+        color: $background
         font-size: $font-size-6
-        border-bottom: 5px solid rgba($black, 0.3)
     .row
-        padding: 0px 10px
         .item
             height: 100%
             width: 100%
+            transition: all .3s
+            &:hover
+                background-color: darken($background, 10%)
+        .circle
+            height: 50px
+            width: 50px
+            border-radius: 100%
+            animation: circleLoad 1s infinite linear
+            &.one
+                border: 3px solid $primary
+                border-bottom-color: $black
+            &.two
+                border: 5px dotted $primary
+                border-bottom-color: $black
+            &.three
+                border: 3px dashed $primary
+                border-bottom-color: $black
+            &.four
+                border: 3px double $primary
+                border-bottom-color: $black
