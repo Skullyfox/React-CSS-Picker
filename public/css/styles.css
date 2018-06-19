@@ -397,6 +397,9 @@ a, a:hover, a:visited {
       -webkit-animation: squareLoad 1.5s infinite linear;
               animation: squareLoad 1.5s infinite linear; }
 
+.ui .dimmer {
+  background-color: rgba(0, 0, 0, 0.3); }
+
 @-webkit-keyframes circleLoad {
   0% {
     -webkit-transform: rotate(0deg);

@@ -1,0 +1,21 @@
+<rt-import name="Modal" from="semantic-ui-react" />
+<rt-import name="Header" from="semantic-ui-react" />
+<rt-import name="Icon" from="semantic-ui-react" />
+<rt-import name="Button" from="semantic-ui-react" />
+
+<div class="row grid is-4-columns">
+    <rt-virtual rt-repeat="kf in this.state.keyframes">
+        <div class="item flex columns center centered" onClick="{() => this.openModal(kf)}">
+            <div class="{kf.class}"></div>
+            <Modal open="{this.state.modalOpen && this.state.selectedItem === kf}" onClose="{() => this.closeModal()}" basic size='small'>
+                <Header icon='code' content='{this.state.selectedItem.title}'/>
+                <Modal.Content><pre><code>{this.state.selectedItem.code}</code></pre></Modal.Content>
+                <Modal.Actions>
+                    <Button color='green' onClick="{() => this.closeModal()}" inverted>
+                        <Icon name='checkmark' /> Got it
+                    </Button>
+                </Modal.Actions>
+            </Modal>
+        </div>
+    </rt-virtual>
+</div>
