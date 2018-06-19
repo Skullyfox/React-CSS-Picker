@@ -4,15 +4,15 @@ import { BrowserRouter, Switch, Route}    from 'react-router-dom';
 
 import Home                               from './pages/Home/Home.jsx';
 import Menu                               from './components/Menu/Menu.jsx';
-import Loader                          from './pages/Loader/Loader.jsx';
+import Loader                             from './pages/Loader/Loader.jsx';
 
 class App extends React.Component {
 
     constructor(props) {
         super(props);
         this.state={
-            homeView: true,
-            loaderView: false,
+            homeView: false,
+            loaderView: true,
         }
         this.goLoaderView = this.goLoaderView.bind(this);
         this.goMenuView = this.goMenuView.bind(this);
@@ -40,12 +40,8 @@ class App extends React.Component {
                         onClick={this.goLoaderView} 
                         onClick2={this.goMenuView} 
                         />
-                    <Switch>
                         {this.state.homeView ? (<Home />): null}
                         {this.state.loaderView ? (<Loader />): null}
-                        {/* <Route path="/" component={Loader}/>
-                        <Route path="/Loader" component={Loader}/> */}
-                    </Switch>
                 </React.Fragment>    
             </BrowserRouter>
         )

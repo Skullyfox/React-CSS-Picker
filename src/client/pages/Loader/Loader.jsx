@@ -8,6 +8,7 @@ class Loader extends React.Component{
 
     render(){
         return template.apply(this)
+        
     }
 }
 
