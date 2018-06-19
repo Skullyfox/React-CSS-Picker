@@ -1,10 +1,10 @@
 <div className="menu">
     <h1 class="menuTitle">Menu</h1>
     <div class="separator"></div>
-    <button id="homeButton" class='dropDownToggler'>Home</button>
+    <button id="homeButton" class='dropDownToggler' onClick="{this.props.onClick2}">Home</button>
     <button id="firstCategoryButton" class='dropDownToggler' onClick="{() => this.droppedToggle()}" >Keyframes</button>
         <div class="dropDownCategory { this.state.toggled ? 'hidden' : ''}">
-            <li>
+            <li onClick="{this.props.onClick}">
                 <p>Loader Picker</p>
             </li>
             <li>
