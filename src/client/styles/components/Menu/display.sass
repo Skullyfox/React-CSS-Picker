@@ -13,14 +13,14 @@
             background-color: #E57373
             color: $black
     #firstCategoryButton
-        background-color: #4CAF50
         color: $foreground
+        animation: bgChange 0.5s infinite alternate
         transition: all .3s
         &:hover
-            background-color: #81C784
+            filter: brightness(110%)
             color: $black
     #secondCategoryButton
-        background-color: #2196F3
+        background: $firstGrad
         color: $foreground
         transition: all .3s
         &:hover
@@ -39,7 +39,7 @@
         width: 100%
         margin: 2px 0 0 0
 
-    .dropDownToggler
+    .button.dropDownToggler
         width: 100%
         border: none
         padding: 10px 0
@@ -63,7 +63,7 @@
             font-size: $font-size-2
             color: $black
             &:hover
-                background-color: $success
+                background-color: #20d8b4
             *
                 opacity: 1
                 transition: all .5s

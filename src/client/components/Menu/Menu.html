@@ -1,11 +1,11 @@
 <div className="menu">
     <h1 class="menuTitle">Menu</h1>
     <div class="separator"></div>
-    <button id="homeButton" class='dropDownToggler' onClick="{this.props.onClick2}">Home</button>
-    <button id="firstCategoryButton" class='dropDownToggler' onClick="{() => this.droppedToggle()}" >Keyframes</button>
+    <button id="homeButton" class='button dropDownToggler' onClick="{this.props.goHome}">Home</button>
+    <button id="firstCategoryButton" class='button dropDownToggler' onClick="{() => this.droppedToggle()}" >Keyframes</button>
         <div class="dropDownCategory { this.state.toggled ? 'hidden' : ''}">
-            <li onClick="{this.props.onClick}">
-                <p>Loader Picker</p>
+            <li onClick="{this.props.goLoader}">
+                <p>Loaders Basiques</p>
             </li>
             <li>
                 <p>[Coming Soon]</p>
@@ -14,5 +14,5 @@
                 <p>[Coming Soon]</p>
             </li>
         </div>
-    <button id="secondCategoryButton" class='dropDownToggler'>[Coming Soon]</button>
+    <button id="secondCategoryButton" class='button dropDownToggler' onClick="{this.props.goGradient}">Gradients</button>
 </div>

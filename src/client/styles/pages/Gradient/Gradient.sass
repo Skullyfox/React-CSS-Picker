@@ -1,0 +1,15 @@
+.Gradient
+    display: grid
+    grid-template-rows: 1fr 4fr
+    .category
+        width: 100%
+        background: $firstGrad
+        color: $background
+        font-size: $font-size-6
+    .row
+        .item
+            height: 100%
+            width: 100%
+            transition: all .3s
+            &:hover
+                background-color: darken($background, 10%)

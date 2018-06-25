@@ -230,6 +230,18 @@ a, a:hover, a:visited {
 .centered-h {
   margin: 0 auto; }
 
+@-webkit-keyframes bgChange {
+  from {
+    background-color: #00b894; }
+  to {
+    background-color: #20d8b4; } }
+
+@keyframes bgChange {
+  from {
+    background-color: #00b894; }
+  to {
+    background-color: #20d8b4; } }
+
 /*============================
     Flexbox helper classes.
     @author Daria <lo.pennequin@gmail.com>
@@ -357,9 +369,10 @@ a, a:hover, a:visited {
   grid-template-rows: 1fr 4fr; }
   .Loader .category {
     width: 100%;
-    background-color: #4CAF50;
     color: #f2f2f2;
-    font-size: 2em; }
+    font-size: 2em;
+    -webkit-animation: bgChange .5s infinite alternate;
+            animation: bgChange .5s infinite alternate; }
   .Loader .row .item {
     height: 100%;
     width: 100%;
@@ -373,16 +386,16 @@ a, a:hover, a:visited {
       -webkit-animation: circleLoad 1s infinite linear;
               animation: circleLoad 1s infinite linear; }
       .Loader .row .item .circle.one {
-        border: 3px solid #4CAF50;
+        border: 3px solid #10c8a4;
         border-bottom-color: #333333; }
       .Loader .row .item .circle.two {
-        border: 5px dotted #4CAF50;
+        border: 5px dotted #10c8a4;
         border-bottom-color: #333333; }
       .Loader .row .item .circle.three {
-        border: 3px dashed #4CAF50;
+        border: 3px dashed #10c8a4;
         border-bottom-color: #333333; }
       .Loader .row .item .circle.four {
-        border: 5px double #4CAF50;
+        border: 5px double #10c8a4;
         border-bottom-color: #333333; }
     .Loader .row .item .square {
       display: flex;
@@ -393,19 +406,19 @@ a, a:hover, a:visited {
       width: 60px;
       border-radius: 10px; }
       .Loader .row .item .square.one {
-        border: 3px solid #4CAF50;
+        border: 3px solid #10c8a4;
         -webkit-animation: squareLoad 1.5s infinite linear;
                 animation: squareLoad 1.5s infinite linear; }
       .Loader .row .item .square.two {
-        border: 5px dotted #4CAF50;
+        border: 5px dotted #10c8a4;
         -webkit-animation: squareLoad 1.5s infinite linear;
                 animation: squareLoad 1.5s infinite linear; }
       .Loader .row .item .square.three {
-        border: 3px dashed #4CAF50;
+        border: 3px dashed #10c8a4;
         -webkit-animation: squareLoad 1.5s infinite linear;
                 animation: squareLoad 1.5s infinite linear; }
       .Loader .row .item .square.four {
-        border: 5px double #4CAF50;
+        border: 5px double #10c8a4;
         -webkit-animation: squareLoad 1.5s infinite linear;
                 animation: squareLoad 1.5s infinite linear; }
     .Loader .row .item .fa-dna {
@@ -416,7 +429,7 @@ a, a:hover, a:visited {
       height: 50;
       width: 50;
       font-size: 2.5em;
-      color: rgba(76, 175, 80, 0.9);
+      color: rgba(16, 200, 164, 0.9);
       -webkit-animation: barLoad 1.5s infinite linear;
               animation: barLoad 1.5s infinite linear; }
     .Loader .row .item .fa-recycle {
@@ -427,7 +440,7 @@ a, a:hover, a:visited {
       height: 50;
       width: 50;
       font-size: 2.5em;
-      color: rgba(76, 175, 80, 0.9);
+      color: rgba(16, 200, 164, 0.9);
       -webkit-animation: squareLoad 1.5s infinite linear;
               animation: squareLoad 1.5s infinite linear; }
     .Loader .row .item .fa-sync-alt {
@@ -438,7 +451,7 @@ a, a:hover, a:visited {
       height: 50;
       width: 50;
       font-size: 2.5em;
-      color: rgba(76, 175, 80, 0.9);
+      color: rgba(16, 200, 164, 0.9);
       -webkit-animation: squareLoad 1.5s infinite linear;
               animation: squareLoad 1.5s infinite linear; }
     .Loader .row .item .fa-hourglass-start {
@@ -449,7 +462,7 @@ a, a:hover, a:visited {
       height: 50;
       width: 50;
       font-size: 2.5em;
-      color: rgba(76, 175, 80, 0.9);
+      color: rgba(16, 200, 164, 0.9);
       -webkit-animation: squareLoad 1.5s infinite linear;
               animation: squareLoad 1.5s infinite linear; }
   .Loader .dimmer {
@@ -503,6 +516,21 @@ a, a:hover, a:visited {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg); } }
 
+.Gradient {
+  display: grid;
+  grid-template-rows: 1fr 4fr; }
+  .Gradient .category {
+    width: 100%;
+    background: linear-gradient(to right, #64B5F6 0%, #fab1a0 120%);
+    color: #f2f2f2;
+    font-size: 2em; }
+  .Gradient .row .item {
+    height: 100%;
+    width: 100%;
+    transition: all .3s; }
+    .Gradient .row .item:hover {
+      background-color: #d9d9d9; }
+
 .menu {
   z-index: 1;
   height: 100vh;
@@ -517,14 +545,16 @@ a, a:hover, a:visited {
       background-color: #E57373;
       color: #333333; }
   .menu #firstCategoryButton {
-    background-color: #4CAF50;
     color: white;
+    -webkit-animation: bgChange 0.5s infinite alternate;
+            animation: bgChange 0.5s infinite alternate;
     transition: all .3s; }
     .menu #firstCategoryButton:hover {
-      background-color: #81C784;
+      -webkit-filter: brightness(110%);
+              filter: brightness(110%);
       color: #333333; }
   .menu #secondCategoryButton {
-    background-color: #2196F3;
+    background: linear-gradient(to right, #64B5F6 0%, #fab1a0 120%);
     color: white;
     transition: all .3s; }
     .menu #secondCategoryButton:hover {
@@ -540,7 +570,7 @@ a, a:hover, a:visited {
     height: 2px;
     width: 100%;
     margin: 2px 0 0 0; }
-  .menu .dropDownToggler {
+  .menu .button.dropDownToggler {
     width: 100%;
     border: none;
     padding: 10px 0;
@@ -548,9 +578,9 @@ a, a:hover, a:visited {
     color: #333333;
     background-color: white;
     transition: all .3s; }
-    .menu .dropDownToggler:focus .menu .dropDownToggler:active {
+    .menu .button.dropDownToggler:focus .menu .button.dropDownToggler:active {
       outline: none; }
-    .menu .dropDownToggler:hover {
+    .menu .button.dropDownToggler:hover {
       background-color: #0daaf2; }
   .menu .dropDownCategory {
     height: auto;
@@ -563,7 +593,7 @@ a, a:hover, a:visited {
       font-size: 1em;
       color: #333333; }
       .menu .dropDownCategory li:hover {
-        background-color: #4fc953; }
+        background-color: #20d8b4; }
       .menu .dropDownCategory li * {
         opacity: 1;
         transition: all .5s; }
