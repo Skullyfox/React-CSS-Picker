@@ -1,4 +1,6 @@
 .Loader
+    display: grid
+    grid-template-rows: 1fr 4fr
     .category
         width: 100%
         background-color: $primary
@@ -11,6 +13,7 @@
             transition: all .3s
             &:hover
                 background-color: darken($background, 10%)
+
             .circle
                 height: 50px
                 width: 50px
@@ -28,6 +31,7 @@
                 &.four
                     border: 5px double $primary
                     border-bottom-color: $black
+
             .square
                 display: flex
                 flex-direction: column
@@ -48,6 +52,49 @@
                 &.four
                     border: 5px double $primary
                     animation: squareLoad 1.5s infinite linear
-.ui
+
+            .fa-dna
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                height: 50
+                width: 50
+                font-size: $font-size-7
+                color: rgba($primary, 0.9)
+                animation: barLoad 1.5s infinite linear
+
+            .fa-recycle
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                height: 50
+                width: 50
+                font-size: $font-size-7
+                color: rgba($primary, 0.9)
+                animation: squareLoad 1.5s infinite linear
+
+            .fa-sync-alt
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                height: 50
+                width: 50
+                font-size: $font-size-7
+                color: rgba($primary, 0.9)
+                animation: squareLoad 1.5s infinite linear
+
+            .fa-hourglass-start
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                height: 50
+                width: 50
+                font-size: $font-size-7
+                color: rgba($primary, 0.9)
+                animation: squareLoad 1.5s infinite linear
     .dimmer
         background-color: rgba(0,0,0,.3)
